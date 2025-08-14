@@ -1,11 +1,15 @@
 package com.company;
+import java.util.Scanner;
 
 public class Aluno {
+    //variáveis
     private int matricula;
-    private String nome;
+    private String nomeCompleto;
     private double notaPrimeiraProva;
     private double notaSegundaProva;
     private double notaTrabalho;
+    //iniciando Scanner
+    Scanner read = new Scanner(System.in);
 
     public Aluno(int matricula , String nome , double notaPrimeiraProva , double notaSegundaProva , double notaTrabalho ){
         if (matricula < 0 ){
@@ -25,21 +29,47 @@ public class Aluno {
         }
 
         this.matricula = matricula;
-        this.nome = nome;
+        this.nomeCompleto = nomeCompleto;
         this.notaPrimeiraProva = notaPrimeiraProva;
         this.notaSegundaProva = notaSegundaProva;
         this.notaTrabalho = notaTrabalho;
     }
 
+    public int getMatricula(){
+        return matricula;
+    }
+
+    public int setMatricula(int numeroDaMatricula){
+        return matricula;
+    }
+
+    public String getNomeCompleto() {
+        return nomeCompleto ;
+    }
+
+    public double setNotaProva1(double notaProva1){
+        return notaPrimeiraProva;
+    }
+
+    public double getNotaProva1(){
+        return notaPrimeiraProva;
+    }
+    public double setnotaProva2(){
+        return notaSegundaProva;
+    }
+    public double getProva2(){
+        return notaSegundaProva;
+    }
+    public double setNotaTrabalho(double notaTrabalho){
+        return notaTrabalho;
+    }
+    public double getNotaTrabalho(){
+        return notaTrabalho;
+    }
+
+
+//Função para calcular a média do aluno 
     public double calcularMedia() {
         return (notaTrabalho * 2 + notaPrimeiraProva * 4 + notaSegundaProva * 4) / 10;
-    }
-
-    public boolean alunoEstaAprovado() {
-        return calcularMedia() >= 7.0;
-    }
-
-    public String getNome() {
-        return nome;
     }
 }
