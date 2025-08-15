@@ -1,38 +1,39 @@
-# calculoMediaPonderada
-Aqui estão os códigos da atividade 03 de POO ( Programação orientada a Objetos ) 
-O que esse código faz:
-Este repositório contém a implementação de uma classe Aluno, que representa um estudante matriculado em uma disciplina. A classe permite calcular a média ponderada do aluno com base nas notas de provas e trabalho, e verificar sua aprovação.
+# 📘 Projeto: Sistema de Cadastro e Avaliação de Alunos
 
-Funcionalidades
-Criação de objetos Aluno com os seguintes atributos:
+Este projeto implementa um sistema simples de cadastro e avaliação de alunos utilizando os princípios da **Programação Orientada a Objetos (POO)** em Java. O programa permite armazenar os dados dos alunos, calcular médias ponderadas e verificar se cada aluno está aprovado ou reprovado com base em suas notas.
 
-Matrícula (inteiro): Deve ser um número positivo.
+## 🧠 Conceitos Aplicados
 
-Nome completo (string): Deve conter pelo menos 2 palavras (nome e sobrenome).
+Este projeto foi desenvolvido com foco em aplicar os seguintes conceitos fundamentais da programação:
 
-Notas:
+### ✅ Encapsulamento
+- Os atributos da classe `Aluno` são privados (`private`) e só podem ser acessados/modificados por meio de **métodos públicos** (`getters` e `setters`).
+- Isso garante proteção e controle sobre os dados internos da classe.
 
-Primeira prova (decimal entre 0 e 10).
+### ✅ Validação de Dados
+- Os métodos `set` validam as regras de negócio:
+  - Matrícula deve ser positiva.
+  - Nome deve conter pelo menos duas palavras.
+  - Notas devem estar entre 0 e 10.
 
-Segunda prova (decimal entre 0 e 10).
+### ✅ Orientação a Objetos (POO)
+- O projeto utiliza os principais pilares da POO:
+  - **Classe** (`Aluno`)
+  - **Objetos** (instâncias criadas no `Main.java`)
+  - **Métodos** (como `calcularMedia`, `setNotaTrabalho`, etc.)
+  - **Construtor** com validações de entrada
+  - **Encapsulamento** para garantir segurança dos dados
 
-Trabalho (decimal entre 0 e 10).
+### ✅ Reutilização de Código
+- O uso de métodos como `calcularMedia()` e `alunoEstaAprovado()` evita repetição e melhora a organização do código.
 
-Métodos:
+---
 
-calcularMedia(): Calcula a média ponderada com os pesos:
+## 🚀 Funcionalidades
 
-Trabalho: peso 2
+- Criar alunos com nome, matrícula e três notas (duas provas e um trabalho)
+- Alterar notas com validação de entrada
+- Calcular média ponderada (P1 e P2 com peso 4, trabalho com peso 2)
+- Verificar automaticamente se o aluno foi aprovado (média >= 7)
 
-Prova 1: peso 4
-
-Prova 2: peso 4
-
-alunoEstaAprovado(): Retorna true se a média for maior ou igual a 7.0, false caso contrário.
-
-Validações
-Matrícula: Número deve ser positivo.
-
-Nome: Deve ter pelo menos dois nomes (nome e sobrenome).
-
-Notas: Devem estar entre 0 e 10. Caso contrário, o programa lança uma exceção IllegalArgumentException.
+---
